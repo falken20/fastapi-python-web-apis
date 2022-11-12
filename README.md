@@ -21,9 +21,7 @@ pip install -r requirements.txt
 ```
 
 ##### Running the app
-```bash
-./index.sh
-```
+Every project has its own execution script.
 
 ##### Environment vars
 
@@ -31,11 +29,11 @@ pip install -r requirements.txt
 
 ### PoC index
 #### 1. fastapi_python_web_apis
-
 Small program to test fastapi package.
 
-App --> http://127.0.0.1:8000/
-API Documentation --> http://127.0.0.1:8000/docs
-Alternative API Documentation (provided by Redoc) --> http://127.0.0.1:8000/redoc
+- App --> http://127.0.0.1:8000/
+- API Documentation --> http://127.0.0.1:8000/docs
+- Alternative API Documentation (provided by Redoc) --> http://127.0.0.1:8000/redoc
 
 #### 2. asyncio
+Tests and PoC with asyncio library.
