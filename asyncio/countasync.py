@@ -7,11 +7,13 @@ import time
 
 async def count():
     print("One")
+    # The keyword await passes function control back to the event loop
     await asyncio.sleep(1)
     print("Two")
 
 
 async def main():
+    # it is a SyntaxError to use await outside of an async def coroutine
     await asyncio.gather(count(), count(), count())
 
 
