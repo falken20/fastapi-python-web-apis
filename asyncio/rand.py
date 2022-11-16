@@ -25,6 +25,9 @@ async def makerandom(idx: int, threshold: int = 6) -> int:
 
 
 async def main():
+    # asyncio.gather is to run multiple asynchronous operations. Returns 
+    # the results of awaitables as a tuple with the same order as you pass 
+    # the awaitables to the function
     res = await asyncio.gather(*(makerandom(i, 10 - i - 1) for i in range(3)))
     return res
 

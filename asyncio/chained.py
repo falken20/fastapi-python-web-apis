@@ -33,12 +33,16 @@ async def chain(n: int) -> None:
 
 
 async def main(*args):
+    # asyncio.gather is to run multiple asynchronous operations. Returns 
+    # the results of awaitables as a tuple with the same order as you pass 
+    # the awaitables to the function
     await asyncio.gather(*(chain(n) for n in args))
 
 if __name__ == "__main__":
     import sys
     random.seed(444)
     args = [1, 2, 3] if len(sys.argv) == 1 else map(int, sys.argv[1:])
+    print(f"Args: {args}")
     start = time.perf_counter()
     asyncio.run(main(*args))
     end = time.perf_counter() - start

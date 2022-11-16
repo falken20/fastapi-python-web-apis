@@ -14,6 +14,9 @@ async def count():
 
 async def main():
     # it is a SyntaxError to use await outside of an async def coroutine
+    # asyncio.gather is to run multiple asynchronous operations. Returns 
+    # the results of awaitables as a tuple with the same order as you pass 
+    # the awaitables to the function
     await asyncio.gather(count(), count(), count())
 
 
